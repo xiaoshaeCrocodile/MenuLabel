@@ -240,11 +240,12 @@ MenuLabelGetStorage(button, "|确认");
 
 因为MenuTable系统标签中使用的标题是Utf8进行存储，所以保证设置C程序编译和终端的字符编码格式为Utf8，否则可能会出现乱码等未定义的结果。
 
+//程序
 #include <stdio.h>
 
 #include <locale.h>
 
-#include <windows.h>   //该库只能在Windows环境下运行，不可以移植到linux中
+#include <windows.h>  
 
 #include "Utf8.h"
 
@@ -252,7 +253,6 @@ MenuLabelGetStorage(button, "|确认");
 
 int main(void) {
 
-	//UTF8兼容设置
 	
 	setlocale(LC_ALL, "zh_CN.UTF-8");
 	
